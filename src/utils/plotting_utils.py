@@ -42,17 +42,17 @@ def two_line_plot_secondary_axis(x, y1, y2, y1_name="y1", y2_name="y2", title=""
             'xanchor': 'center',
             'yanchor': 'top'},
             title_text=title,
-            titlefont={
-                "size": 20
-            },
+            # titlefont={
+            #     "size": 20
+            # },
             legend_title = None,
             yaxis=dict(
                 title_text=ylabel,
-                titlefont=dict(size=12),
+                # titlefont=dict(size=12),
             ),
             xaxis=dict(
                 title_text=xlabel,
-                titlefont=dict(size=12),
+                # titlefont=dict(size=12),
             )
         )
     if greyscale:
@@ -145,15 +145,15 @@ def plot_autocorrelation(series,vertical=False, figsize=(500, 900), **kwargs):
             'x':0.5,
             'xanchor': 'center',
             'yanchor': 'top'},
-            titlefont={
-                "size": 20
-            },
+            # titlefont={
+            #     "size": 20
+            # },
             legend_title = None,
             yaxis=dict(
-                titlefont=dict(size=12),
+                # titlefont=dict(size=12),
             ),
             xaxis=dict(
-                titlefont=dict(size=12),
+                # titlefont=dict(size=12),
             )
         )
     return fig
