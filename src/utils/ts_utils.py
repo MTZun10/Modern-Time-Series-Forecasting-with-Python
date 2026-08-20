@@ -30,13 +30,13 @@ from typing import Optional, Tuple, Union, Sequence, Callable, cast
 from src.utils.data_utils import is_datetime_dtypes
 import pandas as pd
 
-def _remove_nan_union(array_a: np.ndarray,
-                      array_b: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
+def _remove_nan_union(array_a, array_b):
     """
     Returns the two inputs arrays where all elements are deleted that have an index that corresponds to
     a NaN value in either of the two input arrays.
     """
-
+    array_a = np.asarray(array_a).squeeze()
+    array_b = np.asarray(array_b).squeeze()
     isnan_mask = np.logical_or(np.isnan(array_a), np.isnan(array_b))
     return np.delete(array_a, isnan_mask), np.delete(array_b, isnan_mask)
 
